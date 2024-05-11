@@ -2,12 +2,11 @@ import 'dart:convert';
 
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import "package:collection/collection.dart";
 
 import '../../presentation/controllers/datafetchcontroller.dart';
 
 abstract class FetchRemoteDataSource {
-  Future<List<Map<String, dynamic>>> FetchDataSource();
+  Future<List<Map<String, dynamic>>> fetchDataSource();
 }
 
 class FetchRemoteDataSourceImpl extends FetchRemoteDataSource {
@@ -16,10 +15,10 @@ class FetchRemoteDataSourceImpl extends FetchRemoteDataSource {
 
   List<Map<String, dynamic>> finalCountryMap = <Map<String, dynamic>>[].obs;
 
-  RxList<Map<String, dynamic>> get filterdata => this.finalCountryList;
+  RxList<Map<String, dynamic>> get filterdata => finalCountryList;
 
   @override
-  Future<List<Map<String, dynamic>>> FetchDataSource() async {
+  Future<List<Map<String, dynamic>>> fetchDataSource() async {
     http.Response response;
 
     response = await http.get(Uri.parse('https://restcountries.com/v3.1/all'));
@@ -33,7 +32,6 @@ class FetchRemoteDataSourceImpl extends FetchRemoteDataSource {
 
       return temp;
     } else {
-      print('FetchCountryBlock Called Client Failed');
       throw Exception();
     }
   }

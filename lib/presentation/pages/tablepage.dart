@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -174,7 +172,9 @@ class _CountryScreenState extends State<CountryScreen> {
                   Expanded(
                     flex: 4,
                     child: Text(
-                      data['capital'][0].toString(),
+                      data['capital'] != null
+                          ? data['capital'][0].toString()
+                          : '',
                       style:
                           const TextStyle(color: Colors.black, fontSize: 18.0),
                     ),
@@ -240,7 +240,7 @@ class _CountryScreenState extends State<CountryScreen> {
                   Expanded(
                     flex: 4,
                     child: Text(
-                      data['subregion'].toString(),
+                      data['subregion'] ?? '',
                       style:
                           const TextStyle(color: Colors.black, fontSize: 18.0),
                     ),

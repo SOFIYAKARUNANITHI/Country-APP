@@ -1,10 +1,7 @@
-import 'dart:math';
-
 import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:assign/data/repositories/fetchdatarepository_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:assign/presentation/pages/tablepage.dart';
 
 import '../controllers/datafetchcontroller.dart';
 
@@ -12,12 +9,11 @@ class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
-  _HomePageState createState() => _HomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class HomePageState extends State<HomePage> {
   DataFetchController datasourcecontroller = Get.put(DataFetchController());
-  final TextEditingController _searchController = TextEditingController();
   final String routeName = '/country_view';
 
   @override

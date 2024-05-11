@@ -1,4 +1,3 @@
-import 'package:assign/data/datasources/fetch_remote_data.dart';
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
 import "package:collection/collection.dart";
@@ -45,7 +44,6 @@ class DataFetchController extends GetxController {
                       MapEntry(key, value.map((e) => e).whereNotNull()))))
           .entries
           .toList();
-      print(fetchdataResponse);
     }
     update();
   }
@@ -61,9 +59,7 @@ class DataFetchController extends GetxController {
     Either<Failure, List<Map<String, dynamic>>> failureOrSuccessMessage,
   ) async {
     failureOrSuccessMessage.fold(
-      (l) {
-        print('Error While Fetching Data');
-      },
+      (l) {},
       (r) {
         var group = groupBy(r, (Map<String, dynamic> e) => e['region']).map(
             (key, value) => MapEntry(

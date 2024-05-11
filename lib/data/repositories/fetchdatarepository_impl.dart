@@ -11,10 +11,9 @@ class FetchdataRepositoryImpl implements FetchdataRepository {
     InternetConnectionChecker connectionChecker = InternetConnectionChecker();
 
     try {
-      print('Fetch Repo Implementation');
       List<Map<String, dynamic>> datList = <Map<String, dynamic>>[];
       if (await connectionChecker.hasConnection) {
-        datList = await FetchRemoteDataSourceImpl().FetchDataSource();
+        datList = await FetchRemoteDataSourceImpl().fetchDataSource();
       }
       return Right(datList);
     } catch (e) {
