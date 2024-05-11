@@ -20,7 +20,7 @@ And also there's a search option ,you can use it by clicking on Side App bar sea
 
 ![abc5c961-8797-49e4-b3ec-f4f497f0474e](https://github.com/SOFIYAKARUNANITHI/Country-APP/assets/102280794/55561c78-2d77-4159-8bb4-5addff0cf2c2)
 
-Even if there's a huge number of country ,the search engine works on fraction of seconds
+Even if there's a huge number of country ,the search engine works on fraction of seconds And there is pull down refresh option also available
 
 ![9cafd3fc-d336-4167-8551-bf43a27c8074](https://github.com/SOFIYAKARUNANITHI/Country-APP/assets/102280794/eb3c8ccb-1ccb-44c5-a15f-a24fa0572293)
 
